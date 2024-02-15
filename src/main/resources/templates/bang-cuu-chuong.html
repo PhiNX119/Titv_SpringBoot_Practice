@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bang Cuu Chuong</title>
+    <link th:href="@{../css/bootstrap.min.css}" rel="stylesheet"/>
+</head>
+<body class="d-flex justify-content-center">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Bang Cuu Chuong - <span th:text="${number}">0</span></h5>
+        <table class="table">
+            <tr th:each="i : ${#numbers.sequence(1,10)}">
+                <td th:text="${number}"></td>
+                <td>x</td>
+                <td th:text="${i}"></td>
+                <td>=</td>
+                <td th:text="${number*i}"></td>
+            </tr>
+        </table>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+<script th:src="@{../js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
